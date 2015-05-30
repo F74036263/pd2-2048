@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../jordan1.jpg</file>
+        <file>../jordan2.jpg</file>
+        <file>../jordan3.jpg</file>
+        <file>../jordan4.jpg</file>
+        <file>../jordan5.jpg</file>
+        <file>../jordan6.jpg</file>
+        <file>../jordan7.jpg</file>
+        <file>../jordan8.jpg</file>
+        <file>../jordan9.jpg</file>
+        <file>../jordan10.jpg</file>
+        <file>../jordan11.jpg</file>
+    </qresource>
+</RCC>

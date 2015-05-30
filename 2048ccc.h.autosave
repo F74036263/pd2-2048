@@ -1,0 +1,28 @@
+#ifndef 2048CCC
+#define 2048CCC
+
+#include <QLabel>
+
+
+class 2048ccc
+{
+
+public:
+    explicit 2048ccc();
+    ~2048ccc();
+
+    int getNumber();
+    QLabel *getLabel();
+    void setNumber(int number);
+    void setPixmap();
+    void setLabel(QLabel *label);
+
+private:
+    int num;
+    QLabel *Tlabel;
+    QPixmap jordan1,jordan2,jordan3,jordan4,jordan5,jordan6,jordan7,jordan8,jordan9,jordan10,jorda11;
+
+};
+
+#endif // 2048CCC
+

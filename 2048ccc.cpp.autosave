@@ -1,0 +1,30 @@
+#include "2048ccc.h"
+
+
+2048ccc::2048ccc()
+{
+}
+
+2048ccc::~2048ccc()
+{
+}
+
+QLabel *2048ccc::getLabel()
+{
+    return Tlabel;
+}
+
+void 2048ccc::setLabel(QLabel *label)
+{
+    Tlabel = label;
+}
+
+int 2048ccc::getNumber()
+{
+    return num;
+}
+
+void 2048ccc::setNumber(int number)
+{
+    num = number;
+}
