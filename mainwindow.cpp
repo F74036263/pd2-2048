@@ -118,10 +118,10 @@ void MainWindow::rndaddNum()
 
 }
 
-void MainWindow::leftslide()
+void MainWindow::left()
 {
     bool merge=false;
-    QPoint qstart, qend, qmerge;
+    QPoint begin, over, combine;
     for(int x=0;x<4;x++)
     {
         for(int y=0;y<4;y++)
@@ -132,10 +132,10 @@ void MainWindow::leftslide()
                 {
                     if(ccc2048Map[y][x]->getNumber()==0)
                     {
-                        qstart.setX(z);
-                        qstart.setY(x);
-                        qend.setX(y);
-                        qend.setY(x);
+                        begin.setX(z);
+                        begin.setY(x);
+                        over.setX(y);
+                        over.setY(x);
 
                         ccc2048Map[y][x]->setNumber(ccc2048Map[z][x]->getNumber());
                         ccc2048Map[z][x]->setNumber(0);
@@ -143,12 +143,12 @@ void MainWindow::leftslide()
                     }
                   else if(ccc2048Map[y][x]->getNumber()==ccc2048Map[z][x]->getNumber())
                   {
-                        qstart.setX(z);
-                        qstart.setY(x);
-                        qend.setX(y);
-                        qend.setY(x);
-                        qmerge.setX(y);
-                        qmerge.setY(x);
+                        begin.setX(z);
+                        begin.setY(x);
+                        over.setX(y);
+                        over.setY(x);
+                        combine.setX(y);
+                        combine.setY(x);
                         ccc2048Map[y][x]->setNumber(ccc2048Map[y][x]->getNumber()*2);
                         ccc2048Map[z][x]->setNumber(0);
                         addtemptscore(ccc2048Map[y][x]->getNumber());
@@ -166,10 +166,10 @@ void MainWindow::leftslide()
     yousuck();
 }
 
-void MainWindow::rightslide()
+void MainWindow::right()
 {
     bool merge = false;
-    QPoint qstart, qend, qmerge;
+    QPoint begin, over, combine;
     for(int x=0; x<4; x++)
     {
         for(int y=3; y>=0; y--)
@@ -179,22 +179,22 @@ void MainWindow::rightslide()
                 if(ccc2048Map[z][x]->getNumber()>0){
                     if(ccc2048Map[y][x]->getNumber()==0)
                     {
-                        qstart.setX(z);
-                        qstart.setY(x);
-                        qend.setX(y);
-                        qend.setY(x);
+                        begin.setX(z);
+                        begin.setY(x);
+                        over.setX(y);
+                        over.setY(x);
                         ccc2048Map[y][x]->setNumber(ccc2048Map[z][x]->getNumber());
                         ccc2048Map[z][x]->setNumber(0);
                         y++;
                     }
                     else if(ccc2048Map[y][x]->getNumber()==ccc2048Map[z][x]->getNumber())
                     {
-                        qstart.setX(z);
-                        qstart.setY(x);
-                        qend.setX(y);
-                        qend.setY(x);
-                        qmerge.setX(y);
-                        qmerge.setY(x);
+                        begin.setX(z);
+                        begin.setY(x);
+                        over.setX(y);
+                        over.setY(x);
+                        combine.setX(y);
+                        combine.setY(x);
                         ccc2048Map[y][x]->setNumber(ccc2048Map[y][x]->getNumber()*2);
                         ccc2048Map[z][x]->setNumber(0);
                         addtemptscore(ccc2048Map[y][x]->getNumber());
@@ -214,10 +214,10 @@ void MainWindow::rightslide()
 
 
 
-void MainWindow::upslide()
+void MainWindow::up()
 {
     bool merge = false;
-    QPoint qstart, qend, qmerge;
+    QPoint begin, over, combine;
     for(int x=0; x<4; x++)
     {
         for(int y=0; y<4; y++)
@@ -228,10 +228,10 @@ void MainWindow::upslide()
                 {
                     if(ccc2048Map[x][y]->getNumber()==0)
                     {
-                        qstart.setX(x);
-                        qstart.setY(z);
-                        qend.setX(x);
-                        qend.setY(y);
+                        begin.setX(x);
+                        begin.setY(z);
+                        over.setX(x);
+                        over.setY(y);
 
                         ccc2048Map[x][y]->setNumber(ccc2048Map[x][z]->getNumber());
                         ccc2048Map[x][z]->setNumber(0);
@@ -239,12 +239,12 @@ void MainWindow::upslide()
                     }
                     else if(ccc2048Map[x][y]->getNumber()==ccc2048Map[x][z]->getNumber())
                     {
-                        qstart.setX(x);
-                        qstart.setY(z);
-                        qend.setX(x);
-                        qend.setY(y);
-                        qmerge.setX(x);
-                        qmerge.setY(y);
+                        begin.setX(x);
+                        begin.setY(z);
+                        over.setX(x);
+                        over.setY(y);
+                        combine.setX(x);
+                        combine.setY(y);
 
                         ccc2048Map[x][y]->setNumber(ccc2048Map[x][y]->getNumber()*2);
                         ccc2048Map[x][z]->setNumber(0);
@@ -263,10 +263,10 @@ void MainWindow::upslide()
     yousuck();
 }
 
-void MainWindow::downslide()
+void MainWindow::down()
 {
     bool merge = false;
-    QPoint qstart, qend, qmerge;
+    QPoint begin, over, combine;
     for(int x=0; x<4; x++)
     {
         for(int y=3; y>=0; y--)
@@ -277,10 +277,10 @@ void MainWindow::downslide()
                 {
                     if(ccc2048Map[x][y]->getNumber()==0)
                     {
-                        qstart.setX(x);
-                        qstart.setY(z);
-                        qend.setX(x);
-                        qend.setY(y);
+                        begin.setX(x);
+                        begin.setY(z);
+                        over.setX(x);
+                        over.setY(y);
 
                         ccc2048Map[x][y]->setNumber(ccc2048Map[x][z]->getNumber());
                         ccc2048Map[x][z]->setNumber(0);
@@ -288,12 +288,12 @@ void MainWindow::downslide()
                     }
                     else if(ccc2048Map[x][y]->getNumber()==ccc2048Map[x][z]->getNumber())
                     {
-                        qstart.setX(x);
-                        qstart.setY(z);
-                        qend.setX(x);
-                        qend.setY(y);
-                        qmerge.setX(x);
-                        qmerge.setY(y);
+                        begin.setX(x);
+                        begin.setY(z);
+                        over.setX(x);
+                        over.setY(y);
+                        combine.setX(x);
+                        combine.setY(y);
 
                         ccc2048Map[x][y]->setNumber(ccc2048Map[x][y]->getNumber()*2);
                         ccc2048Map[x][z]->setNumber(0);
@@ -373,19 +373,19 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     switch (event->key())
     {
         case Qt::Key_Left:
-        leftslide();
+        left();
         break;
 
         case Qt::Key_Right:
-        rightslide();
+        right();
         break;
 
         case Qt::Key_Up:
-        upslide();
+        up();
         break;
 
         case Qt::Key_Down:
-        downslide();
+        down();
         break;
 
     }

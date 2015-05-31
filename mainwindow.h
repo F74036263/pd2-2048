@@ -26,10 +26,10 @@ public:
     void setupccc2048();
     void Gamestart();
     void rndaddNum();
-    void leftslide();// 向左移動tile.
-    void rightslide();// 向右移動tile.
-    void upslide();// 向上移動tile.
-    void downslide();// 向下移動tile.
+    void left();
+    void right();
+    void up();
+    void down();
     void addtemptscore(int i);
     void addscore();
     void yousuck();
